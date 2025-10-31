@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_types_story_scenes",
+  "info": {
+    "displayName": "Story Scene",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "dialogue": {
+      "type": "richtext",
+      "required": false
+    },
+    "character": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::character.character"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "emotion": {
+      "type": "component",
+      "component": "types.emotion-type",
+      "repeatable": false
+    },
+    "orientation": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Top Left",
+        "Top Right",
+        "Bottom Left",
+        "Bottom Right"
+      ]
+    }
+  },
+  "config": {}
+}

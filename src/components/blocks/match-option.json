@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_match_options",
+  "info": {
+    "displayName": "Match Option"
+  },
+  "options": {},
+  "attributes": {
+    "left": {
+      "type": "string"
+    },
+    "right": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

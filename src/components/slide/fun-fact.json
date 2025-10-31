@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_slide_fun_facts",
+  "info": {
+    "displayName": "Fun Fact",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "fact": {
+      "type": "text",
+      "required": true
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "character": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::character.character"
+    },
+    "characterEmotion": {
+      "type": "component",
+      "component": "types.emotion-type",
+      "repeatable": false
+    },
+    "characterDialogue": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

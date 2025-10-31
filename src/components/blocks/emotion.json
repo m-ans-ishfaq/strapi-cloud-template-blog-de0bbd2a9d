@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_emotions",
+  "info": {
+    "displayName": "Emotion"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "emotion": {
+      "type": "component",
+      "component": "types.emotion-type",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

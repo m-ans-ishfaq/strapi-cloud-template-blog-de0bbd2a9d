@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_types_emotion_types",
+  "info": {
+    "displayName": "Emotion Type"
+  },
+  "options": {},
+  "attributes": {
+    "emotionType": {
+      "type": "enumeration",
+      "enum": [
+        "sad",
+        "happy",
+        "joy",
+        "sorrow",
+        "angry",
+        "frustrated"
+      ]
+    }
+  },
+  "config": {}
+}

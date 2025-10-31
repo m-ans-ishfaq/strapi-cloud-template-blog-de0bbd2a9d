@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_slide_analogies",
+  "info": {
+    "displayName": "Analogy",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "analogy": {
+      "type": "richtext",
+      "required": true
+    },
+    "point": {
+      "type": "richtext",
+      "required": true
+    },
+    "orientation": {
+      "type": "enumeration",
+      "enum": [
+        "Vertical",
+        "Horizontal"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topics",
+  "info": {
+    "singularName": "topic",
+    "pluralName": "topics",
+    "displayName": "Topic"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "chapter": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::chapter.chapter",
+      "inversedBy": "topics"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "slide.mcq",
+        "slide.true-false",
+        "slide.story",
+        "slide.stack",
+        "slide.slice",
+        "slide.point-to-ponder",
+        "slide.matching",
+        "slide.heading",
+        "slide.fun-fact",
+        "slide.diagram",
+        "slide.analogy",
+        "slide.simulation"
+      ]
+    }
+  }
+}

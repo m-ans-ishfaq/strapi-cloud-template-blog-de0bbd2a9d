@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_slide_slices",
+  "info": {
+    "displayName": "Slice"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

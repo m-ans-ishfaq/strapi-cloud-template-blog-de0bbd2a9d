@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_stack_options",
+  "info": {
+    "displayName": "Stack Option",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "order": {
+      "type": "integer",
+      "required": true
+    },
+    "statement": {
+      "type": "string"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_tf_options",
+  "info": {
+    "displayName": "TF Option"
+  },
+  "options": {},
+  "attributes": {
+    "statement": {
+      "type": "string",
+      "required": true
+    },
+    "boolean": {
+      "type": "boolean",
+      "required": true
+    },
+    "negativeReason": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_slide_simulations",
+  "info": {
+    "displayName": "Simulation"
+  },
+  "options": {},
+  "attributes": {
+    "simulationId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  },
+  "config": {}
+}

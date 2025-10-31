@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_slide_stacks",
+  "info": {
+    "displayName": "Stack",
+    "icon": "feather"
+  },
+  "options": {},
+  "attributes": {
+    "statement": {
+      "type": "string"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "blocks": {
+      "type": "component",
+      "component": "blocks.stack-option",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

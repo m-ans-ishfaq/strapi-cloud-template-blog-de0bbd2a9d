@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_slide_mcqs",
+  "info": {
+    "displayName": "MCQ",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "a": {
+      "type": "component",
+      "component": "blocks.option",
+      "repeatable": false
+    },
+    "b": {
+      "type": "component",
+      "component": "blocks.option",
+      "repeatable": false
+    },
+    "c": {
+      "type": "component",
+      "component": "blocks.option",
+      "repeatable": false
+    },
+    "d": {
+      "type": "component",
+      "component": "blocks.option",
+      "repeatable": false
+    },
+    "correctOption": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "duration": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

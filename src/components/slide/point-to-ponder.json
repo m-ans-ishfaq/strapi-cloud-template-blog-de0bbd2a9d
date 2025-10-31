@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_slide_point_to_ponders",
+  "info": {
+    "displayName": "Point To Ponder"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    },
+    "character": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::character.character"
+    }
+  },
+  "config": {}
+}

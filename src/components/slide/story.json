@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_slide_stories",
+  "info": {
+    "displayName": "Story"
+  },
+  "options": {},
+  "attributes": {
+    "scenes": {
+      "type": "component",
+      "component": "types.story-scene",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

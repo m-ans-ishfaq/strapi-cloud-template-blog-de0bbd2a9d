@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_slide_matchings",
+  "info": {
+    "displayName": "Matching"
+  },
+  "options": {},
+  "attributes": {
+    "options": {
+      "type": "component",
+      "component": "blocks.match-option",
+      "repeatable": true
+    },
+    "statement": {
+      "type": "string"
+    },
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  },
+  "config": {}
+}

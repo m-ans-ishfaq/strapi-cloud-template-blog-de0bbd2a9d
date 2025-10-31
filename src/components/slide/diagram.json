@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_slide_diagrams",
+  "info": {
+    "displayName": "Diagram",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "illustration": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

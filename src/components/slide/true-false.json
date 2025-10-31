@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_slide_true_falses",
+  "info": {
+    "displayName": "True False",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "exercises": {
+      "type": "component",
+      "component": "blocks.tf-option",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
