@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_slide_step_flows",
+  "info": {
+    "displayName": "Step Flow"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "steps": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}

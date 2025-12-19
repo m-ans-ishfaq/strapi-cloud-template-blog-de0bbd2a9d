@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_zoom_reveals",
+  "info": {
+    "displayName": "Zoom Reveal"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "labels": {
+      "type": "component",
+      "component": "blocks.zoom-reveal-label",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

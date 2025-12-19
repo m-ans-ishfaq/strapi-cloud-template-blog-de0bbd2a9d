@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_slide_comparison_cards",
+  "info": {
+    "displayName": "Comparison Cards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "left": {
+      "type": "component",
+      "component": "blocks.comparison-card",
+      "repeatable": false,
+      "required": true
+    },
+    "right": {
+      "type": "component",
+      "component": "blocks.comparison-card",
+      "repeatable": false,
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksComparisonCard extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_comparison_cards';
+  info: {
+    displayName: 'Comparison Card';
+  };
+  attributes: {
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'videos'> &
+      Schema.Attribute.Required;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface BlocksEmotion extends Struct.ComponentSchema {
   collectionName: 'components_blocks_emotions';
   info: {
@@ -8,6 +21,17 @@ export interface BlocksEmotion extends Struct.ComponentSchema {
   attributes: {
     emotion: Schema.Attribute.Component<'types.emotion-type', false>;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksFlipCard extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_flip_cards';
+  info: {
+    displayName: 'Flip Card';
+  };
+  attributes: {
+    back: Schema.Attribute.String & Schema.Attribute.Required;
+    front: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -59,6 +83,32 @@ export interface BlocksTfOption extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksZoomReveal extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_zoom_reveals';
+  info: {
+    displayName: 'Zoom Reveal';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    labels: Schema.Attribute.Component<'blocks.zoom-reveal-label', true> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface BlocksZoomRevealLabel extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_zoom_reveal_labels';
+  info: {
+    displayName: 'Zoom Reveal Label';
+  };
+  attributes: {
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+    x: Schema.Attribute.Decimal & Schema.Attribute.Required;
+    y: Schema.Attribute.Decimal & Schema.Attribute.Required;
+  };
+}
+
 export interface SlideAnalogy extends Struct.ComponentSchema {
   collectionName: 'components_slide_analogies';
   info: {
@@ -72,6 +122,32 @@ export interface SlideAnalogy extends Struct.ComponentSchema {
   };
 }
 
+export interface SlideComparisonCards extends Struct.ComponentSchema {
+  collectionName: 'components_slide_comparison_cards';
+  info: {
+    displayName: 'Comparison Cards';
+  };
+  attributes: {
+    left: Schema.Attribute.Component<'blocks.comparison-card', false> &
+      Schema.Attribute.Required;
+    right: Schema.Attribute.Component<'blocks.comparison-card', false> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SlideConceptMap extends Struct.ComponentSchema {
+  collectionName: 'components_slide_concept_maps';
+  info: {
+    displayName: 'Concept Map';
+  };
+  attributes: {
+    center: Schema.Attribute.String & Schema.Attribute.Required;
+    links: Schema.Attribute.RichText & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SlideDiagram extends Struct.ComponentSchema {
   collectionName: 'components_slide_diagrams';
   info: {
@@ -82,6 +158,17 @@ export interface SlideDiagram extends Struct.ComponentSchema {
     illustration: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.Required;
     text: Schema.Attribute.RichText;
+  };
+}
+
+export interface SlideFlipCardSet extends Struct.ComponentSchema {
+  collectionName: 'components_slide_flip_card_sets';
+  info: {
+    displayName: 'Flip Card Set';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'blocks.flip-card', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -156,7 +243,20 @@ export interface SlidePointToPonder extends Struct.ComponentSchema {
       'oneToOne',
       'api::character.character'
     >;
+    characterEmotion: Schema.Attribute.Component<'types.emotion-type', false>;
     point: Schema.Attribute.String;
+  };
+}
+
+export interface SlideShortAnimation extends Struct.ComponentSchema {
+  collectionName: 'components_slide_short_animations';
+  info: {
+    displayName: 'Short Animation';
+  };
+  attributes: {
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    gif: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -193,6 +293,17 @@ export interface SlideStack extends Struct.ComponentSchema {
     blocks: Schema.Attribute.Component<'blocks.stack-option', true>;
     illustration: Schema.Attribute.Media<'images'>;
     statement: Schema.Attribute.String;
+  };
+}
+
+export interface SlideStepFlow extends Struct.ComponentSchema {
+  collectionName: 'components_slide_step_flows';
+  info: {
+    displayName: 'Step Flow';
+  };
+  attributes: {
+    steps: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -253,21 +364,30 @@ export interface TypesStoryScene extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.comparison-card': BlocksComparisonCard;
       'blocks.emotion': BlocksEmotion;
+      'blocks.flip-card': BlocksFlipCard;
       'blocks.match-option': BlocksMatchOption;
       'blocks.option': BlocksOption;
       'blocks.stack-option': BlocksStackOption;
       'blocks.tf-option': BlocksTfOption;
+      'blocks.zoom-reveal': BlocksZoomReveal;
+      'blocks.zoom-reveal-label': BlocksZoomRevealLabel;
       'slide.analogy': SlideAnalogy;
+      'slide.comparison-cards': SlideComparisonCards;
+      'slide.concept-map': SlideConceptMap;
       'slide.diagram': SlideDiagram;
+      'slide.flip-card-set': SlideFlipCardSet;
       'slide.fun-fact': SlideFunFact;
       'slide.heading': SlideHeading;
       'slide.matching': SlideMatching;
       'slide.mcq': SlideMcq;
       'slide.point-to-ponder': SlidePointToPonder;
+      'slide.short-animation': SlideShortAnimation;
       'slide.simulation': SlideSimulation;
       'slide.slice': SlideSlice;
       'slide.stack': SlideStack;
+      'slide.step-flow': SlideStepFlow;
       'slide.story': SlideStory;
       'slide.true-false': SlideTrueFalse;
       'types.emotion-type': TypesEmotionType;

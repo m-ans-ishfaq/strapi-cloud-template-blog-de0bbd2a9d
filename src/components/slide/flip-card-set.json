@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_slide_flip_card_sets",
+  "info": {
+    "displayName": "Flip Card Set"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "blocks.flip-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

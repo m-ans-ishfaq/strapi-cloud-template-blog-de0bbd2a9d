@@ -12,6 +12,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::character.character"
+    },
+    "characterEmotion": {
+      "type": "component",
+      "component": "types.emotion-type",
+      "repeatable": false
     }
   },
   "config": {}

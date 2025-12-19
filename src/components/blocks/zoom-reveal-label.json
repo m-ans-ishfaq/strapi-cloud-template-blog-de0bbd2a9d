@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_zoom_reveal_labels",
+  "info": {
+    "displayName": "Zoom Reveal Label"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "x": {
+      "type": "decimal",
+      "required": true
+    },
+    "y": {
+      "type": "decimal",
+      "required": true
+    }
+  },
+  "config": {}
+}

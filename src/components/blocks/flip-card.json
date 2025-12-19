@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_blocks_flip_cards",
+  "info": {
+    "displayName": "Flip Card"
+  },
+  "options": {},
+  "attributes": {
+    "front": {
+      "type": "string",
+      "required": true
+    },
+    "back": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

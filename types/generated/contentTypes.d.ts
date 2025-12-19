@@ -531,6 +531,11 @@ export interface ApiTopicTopic extends Struct.CollectionTypeSchema {
         'slide.diagram',
         'slide.analogy',
         'slide.simulation',
+        'slide.flip-card-set',
+        'slide.short-animation',
+        'slide.step-flow',
+        'slide.concept-map',
+        'slide.comparison-cards',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
